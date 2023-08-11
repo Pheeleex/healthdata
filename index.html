@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/stylesheet.css">
+    <!-----Import Vue----->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="nav-bar">
+            <h1>Health Records of Sesame street Residents</h1>
+        </div>
+        <div class="container">
+            <div class="groups" v-for="group in bloodGroups" :key="group.group">
+                <div class="cards">
+                    <h1 class="agegroup">Blood Group {{ group.group }}</h1>
+                    <ul>
+                        <li class="list" v-for="person in group.people" :key="person.name">
+                            {{ person.name }} - {{ person.age }} 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chart-container" :class="{ hidden: !showChart }">
+            <div id="bar-chart"></div>
+        </div>
+        <div :class="{ hidden: showChart }">
+        </div>
+        
+        <div class="buttonContainer">
+            <button @click="toggleChartVisibility">{{ showChart ? 'Hide Chart' : 'Show Chart' }}</button>
+        </div>
+    </div>
+
+
+     <!-------Import highcharts------->
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- Import App -->
+    <script src="./main.js"></script>
+      <!-- Mount App -->
+    <script>
+        const mountedApp = app.mount('#app')
+      </script>
+</body>
+</html>

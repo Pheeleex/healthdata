@@ -1,0 +1,75 @@
+body {
+    background-color: #f2f2f2;
+    margin: 0px;
+    font-family: tahoma;
+    color: #282828;
+  }
+
+  .nav-bar {
+    background: linear-gradient(-90deg, #84cf6a, #16c0b0);
+    padding: 1.5rem;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
+  }
+
+  .nav-bar h1{
+    margin: 0px 19rem;
+    color: #f2f2f2;
+  }
+
+
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+
+  .cards {
+    color: rgb(141, 138, 138);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 18rem;
+    padding: 1rem;
+  }
+
+  .agegroup{
+    background: linear-gradient(-90deg, #84cf6a, #16c0b0);
+    padding: 1rem;
+    color: #2b302a;
+  }
+
+  .list{
+    color:#043d38;
+    line-height: 1.8;
+    list-style: none;
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.buttonContainer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
